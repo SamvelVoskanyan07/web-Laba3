@@ -1,0 +1,122 @@
+/* Общие сбросы и базовые стили (Mobile First) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Шапка (100% ширины) */
+.header {
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Навигация: на смартфонах вертикальный список */
+.nav {
+    width: 100%;
+    background-color: #5ca0f2;
+    padding: 10px 15px;
+}
+
+    .nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Вертикальный список на мобильных */
+        gap: 8px;
+    }
+
+    .nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+/* Контейнер контента через Flexbox */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    gap: 20px;
+}
+
+/* Используем order, чтобы таблица визуально встала выше списка ссылок на смартфоне (п. 3 задания) */
+.table-section {
+    order: 1;
+    width: 100%;
+}
+
+.links-section {
+    order: 2;
+    width: 100%;
+}
+
+.form-section {
+    order: 3;
+    width: 100%;
+}
+
+/* Стили таблиц и форм для мобильных */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    .content-table th, .content-table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    form input, form button {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+/* Подвал */
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* Медиа-запрос для планшетов и десктопов (возвращаем классический вид, если нужно) */
+min-width: 768px {
+    .nav ul
+
+{
+    flex-direction: row; /* Горизонтальное меню на больших экранах */
+    gap: 20px;
+}
+
+/* При необходимости сбрасываем order для десктопа */
+.table-section {
+    order: unset;
+}
+
+.links-section {
+    order: unset;
+}
+}
