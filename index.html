@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 3 - Адаптивная верстка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка и меню -->
+    <header class="site-header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/40" alt="Логотип">
+        </div>
+        <div class="site-title">Название сайта</div>
+        <nav class="site-nav">
+            <a href="#">Ссылка меню 1</a>
+            <a href="#">Ссылка 2</a>
+            <a href="#">Ссылка 3</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-container">
+
+        <!-- Лабораторная работа №1 -->
+        <section class="lab-section">
+            <h2>Лабораторная работа №1 (Список гиперссылок)</h2>
+            <ul>
+                <li><a href="https://kubsu.ru" target="_blank">Абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
+                <li><a href="https://kubsu.ru" target="_blank">Абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+                <li><a href="https://kubsu.ru"><img src="https://via.placeholder.com/150x50" alt="Ссылка-изображение"></a></li>
+                <li><a href="/internal-page">Сокращенную ссылку на внутреннюю страницу</a></li>
+                <li><a href="/">Сокращенную ссылку на главную страницу</a></li>
+                <li><a href="#bottom-form">Ссылку на фрагмент текущей страницы</a></li>
+            </ul>
+        </section>
+
+        <!-- Лабораторная работа №2 -->
+        <section class="lab-section">
+            <h2>Лабораторная работа №2 (Таблица с данными)</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Колонка 1</th>
+                            <th>Колонка 2</th>
+                            <th>Колонка 3</th>
+                            <th>Колонка 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Объединенная ячейка (rowspan)</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                        </tr>
+                        <tr>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Объединенная по горизонтали (colspan)</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                        </tr>
+                        <tr>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                        </tr>
+                        <tr>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                        </tr>
+                        <tr>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                            <td>Данные</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section class="lab-section" id="bottom-form">
+            <h2>Форма обратной связи / анкеты</h2>
+            <form action="#" method="POST" class="feedback-form">
+                <div class="form-group">
+                    <label for="fio">1) ФИО:</label>
+                    <input type="text" id="fio" name="fio">
+                </div>
+                <div class="form-group">
+                    <label
+                           ="phone">2) Телефон:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">3) E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="site-footer">
+        <p>&copy; Самвел Восканян, 2026</p>
+    </footer>
+
+</body>
+</html> for
