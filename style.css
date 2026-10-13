@@ -1,47 +1,59 @@
-/* Основные стили страницы */
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
 }
 
-/* Управляем порядком блоков на ПК через flex/grid */
+/* Стили таблицы, чтобы она выглядела аккуратно с границами */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Управляем порядком блоков на ПК через flex */
 .row.g-4 {
     display: flex;
     flex-direction: column;
 }
 
-/* Порядок на ПК: Лабораторная 1 (Ссылки) -> Лабораторная 2 (Таблица) -> Лабораторная 3 / Форма */
-div.row.g-4 > div:nth-child(1) {
+/* Порядок блоков на ПК: 1 -> 2 -> 3 */
+#links-block {
     order: 1;
 }
 
-div.row.g-4 > div:nth-child(2) {
+#table-block {
     order: 2;
 }
 
-div.row.g-4 > div:nth-child(3) {
+#form-block {
     order: 3;
 }
 
-div.row.g-4 > div:nth-child(4) {
-    order: 4;
-}
-
-/* Мобильная верстка (экраны уже 768px) */
+/* Мобильная верстка (экраны уже 768px) — таблица становится первой */
 max-width: 768px {
-    /* Меняем порядок: Таблица (2-й блок) становится САМОЙ ПЕРВОЙ! */
-    div.row.g-4 > div:nth-child(2) {
+    #table-block {
         order: 1;
     }
-    /* Ссылки (1-й блок) уходят на второе место */
-    div.row.g-4 > div:nth-child(1) {
+    #links-block {
         order: 2;
     }
-    /* Остальные блоки сохраняют порядок */
-    div.row.g-4 > div:nth-child(3) {
+    #form-block {
         order: 3;
-    }
-    div.row.g-4 > div:nth-child(4) {
-        order: 4;
     }
 }
