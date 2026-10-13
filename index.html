@@ -1,155 +1,153 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторные работы №1, №2 и №3</title>
-    <!-- Подключаем Bootstrap для красивого оформления -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-light d-flex flex-column min-vh-100">
-
-    <!-- Шапка сайта -->
-    <header class="site-header navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-2">
-        <div class="container">
-            <div class="d-flex align-items-center gap-2">
-                <img src="image.png" alt="Логотип" class="rounded" style="height: 35px;">
-                <span class="navbar-brand mb-0 h1">Название сайта</span>
+<!-- Шапка сайта -->
+<header class="site-header navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-2">
+    <div class="container">
+        <div class="d-flex align-items-center gap-2">
+            <img src="image.png" alt="Логотип" class="rounded" style="height: 35px;">
+            <span class="navbar-brand mb-0 h1">Студенческий портал</span>
+        </div>
+        <nav class="nav-wrapper px-3 py-2 rounded border border-secondary">
+            <div class="nav gap-3">
+                <a class="nav-link text-light p-0" href="#links-block">Ссылки</a>
+                <a class="nav-link text-light p-0" href="#table-block">Таблица</a>
+                <a class="nav-link text-light p-0" href="#form-block">Форма</a>
             </div>
-            <nav class="nav-wrapper px-3 py-2 rounded border border-secondary">
-                <div class="nav gap-3">
-                    <a class="nav-link text-light p-0" href="#">Ссылка меню 1</a>
-                    <a class="nav-link text-light p-0" href="#">Ссылка 2</a>
-                    <a class="nav-link text-light p-0" href="#">Ссылка 3</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Основной контент -->
+<main class="container my-4 flex-grow-1">
+    <div class="row g-4">
+
+        <!-- Блок 1: Лабораторная №1 (Список гиперссылок) -->
+        <div class="col-12" id="links-block">
+            <section class="bg-white p-4 rounded shadow-sm">
+                <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №1 (Список гиперссылок)</h2>
+                <ul class="list-unstyled ps-3">
+                    <li class="mb-2"><a href="http://www.kubsu.ru/index.php" target="_blank" class="text-decoration-none">Перейти на сайт КубГУ по http</a></li>
+                    <li class="mb-2"><a href="https://www.kubsu.ru/index.php" target="_blank" class="text-decoration-none">Перейти на сайт КубГУ по https</a></li>
+                    <li class="mb-2">
+                        Картинка:
+
+                        <img src="image.png" alt="Цветок" width="200" height="150" class="mt-2 rounded">
+                    </li>
+                    <li class="mb-2"><a href="about/" class="text-decoration-none">Сокращённая ссылка на каталог</a></li>
+                    <li class="mb-2"><a href="https://www.kubsu.ru/index.php" class="text-decoration-none">На главную страницу</a></li>
+                    <li class="mb-2" id="Front">Фрагмент страницы, на который ведёт якорь</li>
+                    <li class="mb-2"><a href="#Front" class="text-decoration-none">Перейти к фрагменту этой страницы</a></li>
+                    <li class="mb-2"><a href="https://www.google.com/search?q=КубГУ&hl=ru&num=10" target="_blank" class="text-decoration-none">Ссылка с тремя параметрами в URL</a></li>
+                    <li class="mb-2"><a href="https://lk.kubsu.ru/Plans/Plan.aspx?id=3069" target="_blank" class="text-decoration-none">Ссылка с параметром id</a></li>
+                    <li class="mb-2"><a href="test1.html" class="text-decoration-none">Относительная ссылка на страницу</a></li>
+                    <li class="mb-2"><a href="about/test2.html" class="text-decoration-none">Относительная ссылка на страницу в подкаталоге</a></li>
+                    <li class="mb-2"><a href="../div.html" class="text-decoration-none">Относительная ссылка на страницу уровнем выше</a></li>
+                    <li class="mb-2"><a href="../../test4.html" class="text-decoration-none">Относительная ссылка на страницу двумя уровнями выше</a></li>
+                    <li class="mb-2">
+                        Подробнее о поступлении можно узнать на
+                        <a href="https://kubsu.ru/ru/abiturient/contacts" target="_blank" class="text-decoration-none">странице для абитуриентов</a> сайта университета.
+                    </li>
+                    <li class="mb-2"><a href="https://ru.wikipedia.org/wiki/HTML#История" target="_blank" class="text-decoration-none">Ссылка на фрагмент стороннего сайта</a></li>
+                    <li class="mb-2">
+                        Карта ссылок на изображении:
+
+                        <img src="test5.svg" alt="Карта ссылок" width="300" height="150" usemap="#imgmap" class="mt-2">
+                        <map name="imgmap">
+                            <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru/ru/abiturient" alt="Абитуриентам"><area shape="circle" coords="225,75,70" href="https://kubsu.ru/contacts" alt="Контакты">
+                        </map>
+                    </li>
+                    <li class="mb-2"><a href="" class="text-decoration-none">Ссылка с пустым href</a></li>
+                    <li class="mb-2"><a href="https://kubsu.ru/" rel="nofollow" class="text-decoration-none">Ссылка с запретом на переход</a></li>
+                    <li class="mb-2">
+                        Нумерованный список ссылок:
+                        <ol class="mt-1">
+                            <li><a href="https://kubsu.ru/" title="Главная страница" class="text-decoration-none">КубГУ</a></li>
+                            <li><a href="https://kubsu.ru/ru/abiturient" title="Абитуриентам" class="text-decoration-none">Абитуриентам</a></li>
+                            <li><a href="https://kubsu.ru/contacts" title="Контакты" class="text-decoration-none">Контакты</a></li>
+                        </ol>
+                    </li>
+                    <li class="mb-2"><a href="ftp://ftp.kubsu.ru/docs/lecture1.pdf" class="text-decoration-none">Ссылка на файл по FTP</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Блок 2: Лабораторная №2 (Таблица с данными) -->
+        <div class="col-12" id="table-block">
+            <section class="bg-white p-4 rounded shadow-sm">
+                <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №2 (Таблица с данными)</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Колонка 1</th>
+                                <th>Колонка 2</th>
+                                <th>Колонка 3</th>
+                                <th>Колонка 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">Ячейка 11, объединённая с 12, 13 и 14</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Ячейка 21, объединённая с 31</td>
+                                <td>Ячейка 22</td>
+                                <td>Ячейка 23</td>
+                                <td>Ячейка 24</td>
+                            </tr>
+                            <tr>
+                                <td>Ячейка 32</td>
+                                <td>Ячейка 33</td>
+                                <td>Ячейка 34</td>
+                            </tr>
+                            <tr>
+                                <td>Ячейка 41</td>
+                                <td colspan="2">Ячейка 42, объединённая с 43</td>
+                                <td>Ячейка 44</td>
+                            </tr>
+                            <tr>
+                                <td>Ячейка 51</td>
+                                <td>Ячейка 52</td>
+                                <td>Ячейка 53</td>
+                                <td>Ячейка 54</td>
+                            </tr>
+                            <tr>
+                                <td>Ячейка 61</td>
+                                <td>Ячейка 62</td>
+                                <td>Ячейка 63</td>
+                                <td>Ячейка 64</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </nav>
+            </section>
         </div>
-    </header>
 
-    <!-- Основной контент -->
-    <main class="container my-4 flex-grow-1">
-        <div class="row g-4">
-            
-            <!-- Лабораторная работа №1 (Список гиперссылок) -->
-            <div class="col-12">
-                <section class="bg-white p-4 rounded shadow-sm">
-                    <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №1 (Список гиперссылок)</h2>
-                    <ul class="ps-3 mb-0">
-                        <li class="mb-2"><a href="https://www.kubsu.ru" target="_blank" class="text-decoration-none">Абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
-                        <li class="mb-2"><a href="https://kubsu.ru" target="_blank" class="text-decoration-none">Абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
-                        <li class="mb-2"><a href="image.png" class="text-decoration-none">Ссылку-изображение</a></li>
-                        <li class="mb-2"><a href="#internal" class="text-decoration-none">Сокращенную ссылку на внутреннюю страницу</a></li>
-                        <li class="mb-2"><a href="/" class="text-decoration-none">Сокращенную ссылку на главную страницу</a></li>
-                        <li class="mb-2"><a href="#bottom-form" class="text-decoration-none">Ссылку на фрагмент текущей страницы</a></li>
-                    </ul>
-                </section>
-            </div>
-
-            <!-- Лабораторная работа №2 (Таблица с данными) -->
-            <div class="col-12">
-                <section class="bg-white p-4 rounded shadow-sm">
-                    <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №2 (Таблица с данными)</h2>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped mb-0">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>Колонка 1</th>
-                                    <th>Колонка 2</th>
-                                    <th>Колонка 3</th>
-                                    <th>Колонка 4</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td rowspan="2">Объединенная ячейка (rowspan)</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                </tr>
-                                <tr>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                </tr><tr>
-                                    <td colspan="2">Объединенная по горизонтали (colspan)</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                </tr>
-                                <tr>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                </tr>
-                                <tr>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                </tr>
-                                <tr>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                    <td>Данные</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Лабораторная работа №3 (Мобильная верстка) -->
-            <div class="col-12">
-                <section class="bg-white p-4 rounded shadow-sm">
-                    <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №3 (Мобильная верстка)</h2>
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <div class="p-3 border rounded bg-light">
-                                <h3 class="h5 fw-bold">Блок 1</h3>
-                                <p class="mb-0">Это первый информационный блок. Верстка выполнена с использованием Flexbox и принципа Mobile First.</p>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3 border rounded bg-light">
-                                <h3 class="h5 fw-bold">Блок 2</h3>
-                                <p class="mb-0">Это второй блок. На экранах мобильных телефонов они выстроены в колонку, а на широких экранах встают в ряд.</p>
-                            </div>
+        <!-- Блок 3: Лабораторная №3 (Мобильная верстка и блоки) -->
+        <div class="col-12" id="form-block">
+            <section class="bg-white p-4 rounded shadow-sm">
+                <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №3 (Мобильная верстка)</h2>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="p-3 border rounded bg-light"><h3 class="h5 fw-bold">Блок 1</h3>
+                            <p class="mb-0">Этот блок адаптирован под мобильные устройства и ПК.</p>
                         </div>
                     </div>
-                </section>
-            </div>
-
-            <!-- Форма обратной связи -->
-            <div class="col-12" id="bottom-form">
-                <section class="bg-white p-4 rounded shadow-sm">
-                    <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Форма обратной связи / анкеты</h2>
-                    <form action="#" method="POST">
-                        <div class="mb-3">
-                            <label for="fio" class="form-label fw-bold">1) ФИО:</label>
-                            <input type="text" id="fio" name="fio" class="form-control" required>
+                    <div class="col-12">
+                        <div class="p-3 border rounded bg-light">
+                            <h3 class="h5 fw-bold">Блок 2</h3>
+                            <p class="mb-0">На экранах телефонов таблица поднимается наверх благодаря flex-порядку.</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label fw-bold">2) Телефон:</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label fw-bold">3) E-mail:</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Отправить</button>
-                    </form>
-                </section>
-            </div>
-
+                    </div>
+                </div>
+            </section>
         </div>
-    </main>
 
-    <!-- Подвал сайта -->
-    <footer class="bg-dark text-white text-center py-3 mt-auto">
-        <p class="mb-0">&copy; Самвел Восканян, 2026</p>
-    </footer>
+    </div>
+</main>
+
+<!-- Подвал сайта -->
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+    <p class="mb-0">&copy; Студенческий портал, 2026</p>
+</footer>
 
 </body>
 </html>
