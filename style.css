@@ -1,10 +1,12 @@
-/* Основные стили */
+/* Базовые стили */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
-/* Стили таблицы, чтобы она выглядела аккуратно с границами */
+/* Оформление таблицы */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -13,7 +15,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #dee2e6;
 }
 
 th, td {
@@ -22,17 +24,17 @@ th, td {
 }
 
 th {
-    background-color: #343a40;
+    background-color: #212529;
     color: white;
 }
 
-/* Управляем порядком блоков на ПК через flex */
+/* Настройка контейнера блоков */
 .row.g-4 {
     display: flex;
     flex-direction: column;
 }
 
-/* Порядок блоков на ПК: 1 -> 2 -> 3 */
+/* Порядок блоков на ПК по умолчанию */
 #links-block {
     order: 1;
 }
@@ -45,7 +47,7 @@ th {
     order: 3;
 }
 
-/* Мобильная верстка (экраны уже 768px) — таблица становится первой */
+/* Мобильная верстка (экраны уже 768px): таблица становится первой */
 max-width: 768px {
     #table-block {
         order: 1;
