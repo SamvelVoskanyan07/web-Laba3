@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 - Мобильная верстка</title>
+    <style>
+        /* Базовые стили (Mobile First) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #4a90e2;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Планшеты и ПК (адаптивность через Flexbox) */
+        min-width: 768px {
+            .container
+
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 1 1 calc(50% - 1rem);
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Мой адаптивный сайт</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Блок 1</h2>
+            <p>Это первый информационный блок. Верстка выполнена с использованием Flexbox и принципа Mobile First.</p>
+        </section>
+
+        <section class="card">
+            <h2>Блок 2</h2>
+            <p>Это второй блок. На экранах мобильных телефонов они выстроены в колонку, а на широких экранах встают в ряд.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
