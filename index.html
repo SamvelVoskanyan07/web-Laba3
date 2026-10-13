@@ -1,120 +1,82 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Лабораторные работы №1 и №2</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<tr>
+                                    <td colspan="2">Объединенная по горизонтали (colspan)</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                    <td>Данные</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
 
-    <header id="main-header">
-        <div class="header-container">
-            <div id="logo"><img src="image.png" alt="Логотип" style="height: 35px;"></div>
-            <div id="site-name">Название сайта</div>
-            <nav id="top-nav">
-                <a href="#">Ссылка меню 1</a>
-                <a href="#">Ссылка 2</a>
-                <a href="#">Ссылка 3</a>
-            </nav>
+            <!-- Лабораторная работа №3 (Мобильная верстка) -->
+            <div class="col-12">
+                <section class="bg-white p-4 rounded shadow-sm">
+                    <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №3 (Мобильная верстка)</h2>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="p-3 border rounded bg-light">
+                                <h3 class="h5 fw-bold">Блок 1</h3>
+                                <p class="mb-0">Это первый информационный блок. Верстка выполнена с использованием Flexbox и принципа Mobile First.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 border rounded bg-light">
+                                <h3 class="h5 fw-bold">Блок 2</h3>
+                                <p class="mb-0">Это второй блок. На экранах мобильных телефонов они выстроены в колонку, а на широких экранах встают в ряд.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <div class="col-12" id="bottom-form">
+                <section class="bg-white p-4 rounded shadow-sm">
+                    <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Форма обратной связи / анкеты</h2>
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="fio" class="form-label fw-bold">1) ФИО:</label>
+                            <input type="text" id="fio" name="fio" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label fw-bold">2) Телефон:</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">3) E-mail:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </section>
+            </div>
+
         </div>
-    </header>
-
-    <main class="content-container">
-        
-        <!-- Контент из первой лабораторной работы -->
-        <section class="block-section">
-            <h2>Лабораторная работа №1 (Список гиперссылок)</h2>
-            <ul>
-                <li><a href="https://www.kubsu.ru">Абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
-                <li><a href="https://www.kubsu.ru">Абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
-                <li><a href="image.jpg">Ссылку-изображение</a></li>
-                <li><a href="#internal">Сокращенную ссылку на внутреннюю страницу</a></li>
-                <li><a href="/">Сокращенную ссылку на главную страницу</a></li>
-                <li><a href="#bottom">Ссылку на фрагмент текущей страницы</a></li>
-            </ul>
-        </section>
-
-        <!-- Контент из второй лабораторной работы: Таблица -->
-        <section class="block-section">
-            <h2>Лабораторная работа №2 (Таблица с данными)</h2>
-            <table class="lab-table">
-                <tr>
-                    <th>Колонка 1</th>
-                    <th>Колонка 2</th>
-                    <th>Колонка 3</th>
-                    <th>Колонка 4</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Объединенная ячейка (rowspan)</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                </tr>
-                <tr>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Объединенная по горизонтали (colspan)</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                </tr>
-                <tr>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                </tr>
-                <tr>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                </tr>
-                <tr>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                    <td>Данные</td>
-                </tr>
-            </table>
-        </section>
-
-        <!-- Контент из второй лабораторной работы: Форма -->
-        <section class="block-section">
-            <h2>Форма обратной связи / анкеты</h2>
-            <form>
-                <p><label>1) ФИО: <input type="text"></label></p>
-                <p><label>2) Телефон: <input type="tel"></label></p>
-                <p><label>3) E-mail: <input type="email"></label></p>
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
     </main>
 
-    <footer id="main-footer">
-        <p>(с) Самвел Восканян, 2026</p>
+    <!-- Подвал сайта -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p class="mb-0">&copy; Самвел Восканян, 2026</p>
     </footer>
-<!-- Лабораторная работа №3 (Мобильная верстка / Блоки) -->
-<div class="col-12 mt-4">
-    <section class="bg-white p-4 rounded shadow-sm">
-        <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №3 (Мобильная верстка)</h2>
-        <div class="row g-3">
-            <div class="col-12">
-                <div class="p-3 border rounded bg-light">
-                    <h3 class="h5 fw-bold">Блок 1</h3>
-                    <p class="mb-0">Это первый информационный блок. Верстка выполнена с использованием Flexbox и принципа Mobile First.</p>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="p-3 border rounded bg-light">
-                    <h3 class="h5 fw-bold">Блок 2</h3>
-                    <p class="mb-0">Это второй блок. На экранах мобильных телефонов они выстроены в колонку, а на широких экранах встают в ряд.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+
 </body>
 </html>
