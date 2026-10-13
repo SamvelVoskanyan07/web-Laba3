@@ -1,90 +1,120 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 3 - Мобильная верстка</title>
-    <style>
-        /* Базовые стили (Mobile First) */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-
-        header {
-            background: #4a90e2;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 1rem;
-            gap: 1rem;
-        }
-
-        .card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 1rem;
-        }
-
-        /* Планшеты и ПК (адаптивность через Flexbox) */
-        min-width: 768px {
-            .container
-
-        {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .card {
-            flex: 1 1 calc(50% - 1rem);
-        }
-        }
-    </style>
+    <title>Лабораторные работы №1 и №2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Мой адаптивный сайт</h1>
+    <header id="main-header">
+        <div class="header-container">
+            <div id="logo"><img src="image.png" alt="Логотип" style="height: 35px;"></div>
+            <div id="site-name">Название сайта</div>
+            <nav id="top-nav">
+                <a href="#">Ссылка меню 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="card">
-            <h2>Блок 1</h2>
-            <p>Это первый информационный блок. Верстка выполнена с использованием Flexbox и принципа Mobile First.</p>
+    <main class="content-container">
+        
+        <!-- Контент из первой лабораторной работы -->
+        <section class="block-section">
+            <h2>Лабораторная работа №1 (Список гиперссылок)</h2>
+            <ul>
+                <li><a href="https://www.kubsu.ru">Абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
+                <li><a href="https://www.kubsu.ru">Абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+                <li><a href="image.jpg">Ссылку-изображение</a></li>
+                <li><a href="#internal">Сокращенную ссылку на внутреннюю страницу</a></li>
+                <li><a href="/">Сокращенную ссылку на главную страницу</a></li>
+                <li><a href="#bottom">Ссылку на фрагмент текущей страницы</a></li>
+            </ul>
         </section>
 
-        <section class="card">
-            <h2>Блок 2</h2>
-            <p>Это второй блок. На экранах мобильных телефонов они выстроены в колонку, а на широких экранах встают в ряд.</p>
+        <!-- Контент из второй лабораторной работы: Таблица -->
+        <section class="block-section">
+            <h2>Лабораторная работа №2 (Таблица с данными)</h2>
+            <table class="lab-table">
+                <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Объединенная ячейка (rowspan)</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                </tr>
+                <tr>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Объединенная по горизонтали (colspan)</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                </tr>
+                <tr>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                </tr>
+                <tr>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                </tr>
+                <tr>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                    <td>Данные</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Контент из второй лабораторной работы: Форма -->
+        <section class="block-section">
+            <h2>Форма обратной связи / анкеты</h2>
+            <form>
+                <p><label>1) ФИО: <input type="text"></label></p>
+                <p><label>2) Телефон: <input type="tel"></label></p>
+                <p><label>3) E-mail: <input type="email"></label></p>
+                <button type="submit">Отправить</button>
+            </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026. Все права защищены.</p>
+    <footer id="main-footer">
+        <p>(с) Самвел Восканян, 2026</p>
     </footer>
-
+<!-- Лабораторная работа №3 (Мобильная верстка / Блоки) -->
+<div class="col-12 mt-4">
+    <section class="bg-white p-4 rounded shadow-sm">
+        <h2 class="h4 mb-3 pb-2 border-bottom text-dark">Лабораторная работа №3 (Мобильная верстка)</h2>
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="p-3 border rounded bg-light">
+                    <h3 class="h5 fw-bold">Блок 1</h3>
+                    <p class="mb-0">Это первый информационный блок. Верстка выполнена с использованием Flexbox и принципа Mobile First.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="p-3 border rounded bg-light">
+                    <h3 class="h5 fw-bold">Блок 2</h3>
+                    <p class="mb-0">Это второй блок. На экранах мобильных телефонов они выстроены в колонку, а на широких экранах встают в ряд.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 </html>
