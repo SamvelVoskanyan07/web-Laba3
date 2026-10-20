@@ -1,4 +1,4 @@
-body {
+Body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -152,4 +152,51 @@ footer {
     text-align: center;
     padding: 15px 0;
     font-size: 0.9rem;
+}
+
+/* ==========================================================
+   МОБИЛЬНАЯ ВЕРСТКА (ЛР №3)
+   ========================================================== */
+
+.main-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Порядок на ПК */
+.block-links { order: 1; }
+.block-table { order: 2; }
+.block-form  { order: 3; }
+
+max-width: 768px {
+    
+    /* 1. Ссылки в шапке выстраиваются СТРОГО В СТОЛБИК */
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Ссылки идут друг под другом */
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* 2. НОВЫЙ ПОРЯДОК: Таблица первая, потом ссылки, потом форма */
+    .block-table {
+        order: 1;
+    }
+
+    .block-links {
+        order: 2;
+    }
+
+    .block-form {
+        order: 3;
+    }
+
+    .block-table {
+        overflow-x: auto; /* Горизонтальная прокрутка для таблицы на узком экране */
+    }
 }
