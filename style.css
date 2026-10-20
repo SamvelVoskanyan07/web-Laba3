@@ -168,7 +168,7 @@ footer {
 .block-table { order: 2; }
 .block-form  { order: 3; }
 
-max-width: 768px {
+@media (max-width: 768px) {
     
     /* 1. Ссылки в шапке выстраиваются СТРОГО В СТОЛБИК */
     .header-content {
