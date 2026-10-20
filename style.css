@@ -1,61 +1,85 @@
-/* Базовые стили */
+/* ==========================================
+   Базовые стили (Десктопная версия)
+   ========================================== */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Оформление таблицы */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    background-color: #fff;
-}
-
-table, th, td {
-    border: 1px solid #dee2e6;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #212529;
+/* Шапка */
+.header {
+    background-color: #3b5014; /* Зеленый цвет из 2-й лабы */
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-/* Настройка контейнера блоков */
-.row.g-4 {
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Контейнер контента */
+.content {
     display: flex;
     flex-direction: column;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
 }
 
-/* Порядок блоков на ПК по умолчанию */
-#links-block {
-    order: 1;
-}
+/* Обычный порядок блоков на ПК:
+   1) Ссылки (order: 1)
+   2) Таблица (order: 2)
+   3) Форма (order: 3)
+*/
+.section-links { order: 1; }
+.section-table { order: 2; }
+.section-form  { order: 3; }
 
-#table-block {
-    order: 2;
-}
-
-#form-block {
-    order: 3;
-}
-
-/* Мобильная верстка (экраны уже 768px): таблица становится первой */
+/* ==========================================
+   Мобильная верстка (экран меньше 768px)
+   ========================================== */
 max-width: 768px {
-    #table-block {
-        order: 1;
+
+    /* 1. Настройки шапки для мобильного */
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
-    #links-block {
-        order: 2;
+
+    .nav {
+        flex-direction: column; /* Ссылки в шапке становятся столбиком */
+        gap: 10px;
     }
-    #form-block {
-        order: 3;
+
+    /* 2. Изменение порядка блоков */
+    .section-table {
+        order: 1; /* ТАБЛИЦА СТАНОВИТСЯ ПЕРВОЙ! */
+    }
+
+    .section-links {
+        order: 2; /* Список ссылок уходит под таблицу */
+    }
+
+    .section-form {
+        order: 3; /* Форма остается снизу */
+    }
+
+    /* Адаптивность таблицы для узких экранов */
+    .section-table {
+        overflow-x: auto; /* Добавляет горизонтальную прокрутку, если таблица не влезает */
     }
 }
